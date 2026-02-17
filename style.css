@@ -1,0 +1,227 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  background: #111;
+  color: #e5e5e5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
+  z-index:50;
+  background:linear-gradient(180deg, rgba(17,17,17,0.9) 0%, rgba(17,17,17,0.15) 100%);
+}
+
+.logoBox .logo{
+  height:36px;
+  display:block;
+}
+
+.controls{
+  color:#e5e5e5;
+  background:transparent;
+  padding:8px 16px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.mainDiv{
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding:120px 6vw 60px 6vw;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65)), url('hero.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.mainContent{
+  max-width:700px;
+}
+
+.mainContent h1{
+  font-size:3.2rem;
+  line-height:1.05;
+  margin-bottom:18px;
+  color:#fff;
+  font-weight:700;
+}
+
+.sub{
+  color:#ddd;
+  font-size:1.05rem;
+  margin-bottom:6px;
+}
+
+.sub2{
+  color:#ddd;
+  margin-bottom:20px;
+}
+
+.inputBox{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+
+.inputBox input{
+  flex:1;
+  padding:14px 16px;
+  border-radius:4px;
+  border: none;
+  outline:none;
+  font-size:1rem;
+}
+
+.getStarted{
+  background:#e50914;
+  color:white;
+  border:none;
+  padding:14px 20px;
+  font-weight:700;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+.submainDiv{
+  padding:40px 6vw 60px 6vw;
+}
+
+.section h2{
+  font-size:1.5rem;
+  margin-bottom:12px;
+}
+
+.slider{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding-bottom:6px;
+  scroll-behavior:smooth;
+}
+
+.slider::-webkit-scrollbar{height:10px}
+.slider::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.12);border-radius:10px}
+
+.card{
+  min-width:180px;
+  border-radius:6px;
+  overflow:hidden;
+  background:#222;
+  position:relative;
+  cursor:pointer;
+}
+
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  transition:transform .35s ease;
+}
+
+.card:hover img{transform:scale(1.08)}
+
+.rank{
+  position:absolute;
+  left:8px;
+  top:8px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:6px 8px;
+  border-radius:4px;
+  font-weight:700;
+}
+
+.reasons-section{
+  padding:40px 6vw;
+  background:linear-gradient(180deg, #0f0f0f, #0b0b0b);
+}
+
+.reasons-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:18px;
+  margin-top:18px;
+}
+
+.reason-card{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  background:#111;
+  padding:18px;
+  border-radius:8px;
+}
+
+.reason-text h3{font-size:1.05rem;margin-bottom:6px}
+.reason-text p{color:#cfcfcf;font-size:0.95rem}
+.reason-icon{width:90px;height:auto;opacity:0.95}
+
+.question-section{padding:40px 6vw;background:transparent}
+.question-grid{max-width:900px;margin-top:16px}
+.question-card{margin-bottom:8px}
+.question-text{
+  width:100%;
+  text-align:left;
+  background:#222;
+  color:#fff;
+  padding:16px 18px;
+  border:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:600;
+  cursor:pointer;
+}
+.question-text .icon{font-size:1.2rem}
+.question-answer{display:none;background:#141414;padding:16px;color:#cfcfcf}
+
+.main-container{background:#000;padding:36px 6vw}
+.content-box{max-width:900px;margin:0 auto;color:#e5e5e5}
+.form-container{display:flex;gap:8px;margin-top:12px}
+.form-container input{flex:1;padding:12px;border:none;border-radius:4px}
+.containergetStarted{background:#e50914;color:#fff;border:none;padding:12px 18px;border-radius:4px}
+
+.footer{background:#050505;color:#757575;padding:36px 6vw;margin-top:20px}
+.footer .call{margin-bottom:18px}
+.footer a{color:#757575}
+.footer-links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.footer-links ul{list-style:none}
+.footer-links li{margin-bottom:8px;font-size:0.95rem}
+.language select{background:#111;color:#e5e5e5;padding:8px;border-radius:4px;border:none}
+
+@media (max-width:900px){
+  .reasons-grid{grid-template-columns:1fr}
+  .slider .card img{height:200px}
+  .mainContent h1{font-size:2rem}
+}
+
+@media (max-width:600px){
+  .header{padding:0 16px}
+  .mainDiv{padding:100px 4vw 40px}
+  .mainContent h1{font-size:1.6rem}
+  .slider{gap:10px}
+  .card{min-width:140px}
+}
+
